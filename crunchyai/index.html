@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrunchyAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header"><div style="width: fit-content; border-radius: 0; margin: auto; display: block; margin: 12px auto;">
+        <a href="https://woxellofficial.github.io/nx" style="display: inline-block; transform: translateX(-12px)"><img src="draw/CrunchyTrans.png" style="width: 45px; border-radius: 0; display: inline-block;"/></a>
+    <!--<div style="display: inline-block; width: 10px;"></div>--><h2 style="font-size: 24px; display: inline-block; margin-top: 9px; transform: translateY(-12px)">CrunchyAI</h2></div></div>
+    <div class="header-space"></div>
+    <div style="width: 100%; height: 300px; overflow: hidden; position: relative; margin-bottom: 50px;" >
+        <img src="draw/CrunchyBanner1080.png" alt="" style="width: 100%; height: 100%; position: absolute; object-fit: cover; object-position: center 75%;"/>
+    </div>
+    <div class="bd">
+    <!--<div style="background-color: white; width: 100px; height: 100px;" class="rotate-anim"></div>-->
+    <div class="d qt dark-box wide-only">
+        <div class="d1" style="min-width: 216px;">
+        <svg id="cSpinner" style="width: 1080px; height: 1080px; zoom: 20%;">
+            <path class="st0" d="M646.1,646.1l70.7,70.7C671.5,762,609,790,540,790c-138.1,0-250-111.9-250-250s111.9-250,250-250
+	            c69,0,131.5,28,176.8,73.2l-70.7,70.7c-28.3-28.3-66-43.9-106.1-43.9s-77.7,15.6-106.1,43.9c-28.3,28.3-43.9,66-43.9,106.1
+        	    s15.6,77.7,43.9,106.1c28.3,28.3,66,43.9,106.1,43.9S617.7,674.4,646.1,646.1z"/>
+            <path class="st0 rotate-anim pivot" id="cRound" d="M974,480.3L808.7,194c-21.3-36.9-60.7-59.7-103.4-59.7H374.7c-42.7,0-82.1,22.8-103.4,59.7L106,480.3
+        	    c-21.3,36.9-21.3,82.5,0,119.4L271.3,886c21.3,36.9,60.7,59.7,103.4,59.7h330.6c42.7,0,82.1-22.8,103.4-59.7L974,599.7
+	            C995.3,562.8,995.3,517.2,974,480.3z M930.9,574.8L765.6,861.1c-12.4,21.5-35.5,34.8-60.3,34.8H374.7c-24.8,0-47.9-13.3-60.3-34.8
+	            L149.1,574.8c-12.4-21.5-12.4-48.2,0-69.7l165.3-286.3c12.4-21.5,35.5-34.8,60.3-34.8h330.6c24.8,0,47.9,13.3,60.3,34.8l165.3,286.3
+	            C943.3,526.7,943.3,553.3,930.9,574.8z"/>
+        </svg>
+        </div>
+        <div style="width: 20px; display: block;"></div>
+        <div class="d2">
+            <div class="v-center">
+                <h1 id="digitAnim" style="font-family: 'Courier Prime'; margin-top: 70px;"></h1>
+            </div>
+        </div>
+    </div>
+    <h1>AI models for everyone</h1>
+    <p>
+        CrunchyAI is a set of open source AI projects to make these technologies <span class="themed-color">accessible to everyone</span>
+    </p>
+    <h1>By the people for the people</h1>
+    <p>
+        Like we said before the CrunchyAI code is <span class="themed-color">open source</span>, that means you can use it for your own projects or redistribute it without paying anything, but we only ask to credit us in your projects!
+    </p>
+    <h1>Our goal</h1>
+    <p>
+        Our main plan is to build various AI models in C++ with the best <span class="themed-color">performance</span>, <span class="themed-color">efficiency</span> and a very <span class="themed-color">intuitive</span> library
+    </p>
+    <h1>About us</h1>
+    <p>
+        <b>Founder & Owner</b>: Ale C<br>
+        <b>Website & art</b>: Ale C<br>
+        <b>Developers</b>: Ale C
+    </p>
+    <h1>External links</h1>
+    <p>
+        Our GitHub repository: <a href="https://github.com/m-kanji/CrunchyAI" target="_blank">CrunchyAI GitHub</a><br>
+        Join our Discord server: <a href="https://discord.gg/p9HMttdCqm" target="_blank">CrunchyAI Discord</a>
+    </p>
+    <hr>
+    <div style="margin-left: 25px; margin-top: 25px;"><a href="https://woxellofficial.github.io/nx" style="display: inline-block; transform: translateX(-12px)"><img src="draw/CrunchyTrans.png" style="width: 45px; border-radius: 0; display: inline-block;"/></a>
+    <!--<div style="display: inline-block; width: 10px;"></div>--><h2 style="font-size: 24px; display: inline-block; margin-top: 9px; transform: translateY(-12px)">CrunchyAI</h2></div>
+    </div>
+    <script>
+        function timeout(time)
+{
+	return new Promise(resolve => setTimeout(resolve, time));
+}
+
+async function typingFx(text, document, cursorChar, oneDigitTime)
+{
+	//document.innerHTML = cursorChar;
+	for(i = 0; i <= text.length; i++)
+	{
+		await timeout(oneDigitTime);
+		document.innerHTML = text.slice(0, i) + cursorChar;
+	}
+}
+
+async function detypingFx(text, document, cursorChar, oneDigitTime)
+{
+	//document.innerHTML = text;
+	for(i = text.length; i >= 0; i--)
+	{
+		await timeout(oneDigitTime);
+		document.innerHTML = text.slice(0, i) + cursorChar;
+	}
+}
+
+async function typingLoopFx(texts, document, cursorChar, positiveDigitTime, negativeDigitTime, typingWaitTime, detypingWaitTime, condition)
+{
+    let pickedIndex = 0;
+    let text;
+	while(condition)
+	{
+        pickedIndex = (pickedIndex + 1) % texts.length;
+        text = texts[pickedIndex];
+		typingFx(text, document, cursorChar, positiveDigitTime);
+		await timeout(detypingWaitTime);
+		detypingFx(text, document, cursorChar, negativeDigitTime);
+		await timeout(typingWaitTime);
+	}
+}
+
+async function blink(elementId, time, condition)
+{
+    while(condition)
+    {
+        try{
+            document.getElementById(elementId).style.visibility = "hidden";
+        }catch{}
+        await timeout(time);
+        try{
+            document.getElementById(elementId).style.visibility = "visible";
+        }catch{}
+        await timeout(time);
+    }
+}
+
+/*let spinFxEnabled = false;
+async function spinFx(minSpeed, maxSpeed, positiveTime, negativeTime, positiveSegment, negativeSegment)
+{
+    if(spinFxEnabled) return;
+    spinFxEnabled = true;
+    for(let i = 0; i < maxSpeed; i++)
+    {
+        
+    }
+}*/
+
+        window.onload = function() {
+            let texts = [
+                "AI models made by the people for the people", "Speed & performance are our main priority"
+            ];
+
+            typingLoopFx(texts, document.getElementById("digitAnim"), "<span id=\"digitCursor\" class=\"themed-color\">_<\/span>", 100, 25, 2000, 7000, true);
+            blink("digitCursor", 250, true);
+        }
+    </script>
+</body>
+</html>
